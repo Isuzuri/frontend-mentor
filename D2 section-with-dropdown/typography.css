@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+body {
+    font-family: 'Epilogue', sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: -1.11px;
+}
+
+.body-m {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.body-s {
+    font-size: 0.875rem;
+    line-height: 1rem;
+}
+
+button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: -0.25px;
+}

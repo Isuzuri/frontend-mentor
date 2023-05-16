@@ -1,0 +1,42 @@
+@import url(typography.css);
+@import url(variables.css);
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 2.5rem;
+    color: var(--light-grey);
+
+    .head-l-side {
+        display: flex;
+        gap: 4rem;
+
+        .logo {
+            background-image: url(images/logo.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        nav {
+            display: flex;
+            gap: 2.5rem;
+
+            .li-features::after, .li-company::after {
+                content: '';
+                display: inline-block;
+                width: 0.5rem;
+                height: 0.25rem;
+                background-image: url(images/icon-arrow-down.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform: translate(50%);
+            }
+        }
+    }
+}
