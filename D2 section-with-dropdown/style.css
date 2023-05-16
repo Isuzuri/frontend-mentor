@@ -28,11 +28,13 @@ header .head-l-side nav {
 }
 header .head-l-side nav .li-features::after, header .head-l-side nav .li-company::after {
   content: "";
+  position: relative;
+  left: 0.5rem;
+  top: -0.1rem;
   display: inline-block;
   width: 0.5rem;
   height: 0.25rem;
   background-image: url(images/icon-arrow-down.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  transform: translate(50%);
 }/*# sourceMappingURL=style.css.map */
