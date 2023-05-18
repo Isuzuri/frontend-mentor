@@ -52,27 +52,19 @@ header {
             display: flex;
             gap: 2.5rem;
             
-
-            .li-features::after, .li-company::after {
-                content: '';
-                position: relative;
-                left: 0.5rem;
-                top: -0.1rem;
-                display: inline-block;
-                width: 0.5rem;
-                height: 0.25rem;
-                background-image: url(images/icon-arrow-down.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
+            img {
+                width: 8px;
+                margin-left: 0.5rem;
+                vertical-align: middle;
             }
-
+            
             > div {
                 transition: 0.2s;
                 cursor: pointer;
 
                 &:hover {
                     color: var(--black);
-                    &::after {
+                    &>img {
                         filter: drop-shadow(0px 0px 0px var(--black));
                     }
                 }
@@ -129,16 +121,23 @@ main {
     border-radius: 10px;
     background-color: white;
     filter: drop-shadow(0px 10px 40px var(--black));
-    color: var(--medium-grey);
-    
+    color: var(--medium-grey);    
 
     ul {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        
+        li {
+            transition: 0.1s;
+            &:hover {
+                color: var(--light-purple);
+            }
+        }
     }
 
     .features-icon {
+        width: 14px;
         vertical-align: middle;
         margin-right: 1rem;
     }

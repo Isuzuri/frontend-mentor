@@ -4,6 +4,7 @@ const companyDropdown = document.querySelector('.li-company');
 window.addEventListener('click', (event) => {
     if (event.target !== featuresDropdown && event.target !== companyDropdown) {
         document.querySelectorAll('.dropdown').forEach(e => e.remove())
+        document.querySelectorAll('.dropdown-arrow').forEach(e => e.style.transform = '')
     } 
 })
 
@@ -24,10 +25,10 @@ companyDropdown.addEventListener('click', () => {
 const featuresDropdownHtml = `
     <div class="features dropdown body-s">
         <ul>
-            <li><span class="todo-icon features-icon"><img src="images/icon-todo.svg" alt=""></span>Todo List</li>
-            <li><span class="calender-icon features-icon"><img src="images/icon-calendar.svg" alt=""></span>Calender</li>
-            <li><span class="reminders-icon features-icon"><img src="images/icon-reminders.svg" alt=""></span>Reminders</li>
-            <li><span class="planning-icon features-icon"><img src="images/icon-planning.svg" alt=""></span>Planning</li>
+            <li><img src="images/icon-todo.svg" alt="" class="todo-icon features-icon">Todo List</li>
+            <li><img src="images/icon-calendar.svg" alt="" class="calender-icon features-icon">Calender</li>
+            <li><img src="images/icon-reminders.svg" alt="" class="reminders-icon features-icon">Reminders</li>
+            <li><img src="images/icon-planning.svg" alt="" class="planning-icon features-icon">Planning</li>
         </ul>
     </div>
 `
@@ -44,9 +45,11 @@ const companyDropdownHtml = `
 
 function stateSwitch(dropdownList, dropdownElement) {
     if (dropdownList.style.display === 'flex') {
-        dropdownList.style.display = 'none'
-    } dropdownList.style.display = 'flex'
-    
+        dropdownList.style.display = 'none';
+    } else {
+        dropdownList.style.display = 'flex' ;
+        dropdownElement.children[0].style.transform = 'rotate(180deg)'
+    }
     dropdownList.style.left = dropdownElement.offsetLeft - (dropdownElement.offsetWidth / 2) + 'px';
     dropdownList.style.top = dropdownElement.offsetTop + dropdownElement.offsetHeight + 'px';
 }
