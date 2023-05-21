@@ -34,6 +34,10 @@ button#register-btn:hover {
   border-color: var(--black);
 }
 
+.menu {
+  display: none;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -125,4 +129,80 @@ main .main-r-side img {
   width: 14px;
   vertical-align: middle;
   margin-right: 1rem;
+}
+
+.dropdown-mobile {
+  display: block;
+  position: relative;
+  filter: none;
+  padding: 0 0 0 0.5rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    overflow-y: visible;
+  }
+  button {
+    display: block;
+    width: 100%;
+  }
+  .menu {
+    display: block;
+    margin: 1rem;
+    text-align: end;
+  }
+  .menu img {
+    cursor: pointer;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: white;
+  }
+  header div, header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .head-l-side nav {
+    gap: 1rem;
+  }
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    gap: 3rem;
+  }
+  main .main-l-side {
+    padding: 0;
+  }
+  main .main-l-side .title {
+    margin-bottom: 1rem;
+  }
+  main .main-l-side .desc {
+    margin-bottom: 1.5rem;
+    color: var(--medium-grey);
+  }
+  main .main-l-side #learn-more-btn {
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
+  main .main-l-side .companys {
+    display: flex;
+    justify-content: center;
+    gap: 1.75rem;
+  }
+  main .main-r-side img {
+    max-width: 480px;
+  }
 }/*# sourceMappingURL=style.css.map */

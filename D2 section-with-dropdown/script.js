@@ -1,11 +1,33 @@
 const featuresDropdown = document.querySelector('.li-features');
 const companyDropdown = document.querySelector('.li-company');
+const menuBtn = document.querySelector('.menu img')
+const learnMoreBtn = document.querySelector('#learn-more-btn')
 
 window.addEventListener('click', (event) => {
-    if (event.target !== featuresDropdown && event.target !== companyDropdown) {
+    if (event.target !== featuresDropdown && event.target !== companyDropdown && event.target !== menuBtn) {
         document.querySelectorAll('.dropdown').forEach(e => e.remove())
         document.querySelectorAll('.dropdown-arrow').forEach(e => e.style.transform = '')
+        document.body.style.backgroundColor = '';
+        document.querySelector('header').style.right = '';
     } 
+})
+
+window.addEventListener('mousemove', () => {
+    const imageContainer = document.querySelector('.main-r-side img')
+    if (window.innerWidth > 640) {
+        imageContainer.src = './images/image-hero-desktop.png'
+    } else {
+        featuresDropdown.classList.add('mobile')
+        companyDropdown.classList.add('mobile')
+        imageContainer.src = './images/image-hero-mobile.png'
+    }
+        
+})
+
+menuBtn.addEventListener('click', () => {
+    const header = document.querySelector('header');
+    header.style.right = 0;
+    document.body.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
 })
 
 featuresDropdown.addEventListener('click', () => {
@@ -44,12 +66,18 @@ const companyDropdownHtml = `
 `
 
 function stateSwitch(dropdownList, dropdownElement) {
-    if (dropdownList.style.display === 'flex') {
-        dropdownList.style.display = 'none';
+    if (dropdownElement.classList.contains('mobile')) {
+        dropdownList.classList.add('dropdown-mobile')
     } else {
-        dropdownList.style.display = 'flex' ;
-        dropdownElement.children[0].style.transform = 'rotate(180deg)'
-    }
-    dropdownList.style.left = dropdownElement.offsetLeft - (dropdownElement.offsetWidth / 2) + 'px';
-    dropdownList.style.top = dropdownElement.offsetTop + dropdownElement.offsetHeight + 'px';
+        if (dropdownList.style.display === 'flex') {
+            dropdownList.style.display = 'none';
+            
+        } else {
+            dropdownList.style.display = 'flex' ;
+            dropdownElement.children[0].style.transform = 'rotate(180deg)'
+            dropdownList.style.left = dropdownElement.offsetLeft - (dropdownElement.offsetWidth / 2) + 'px';
+            dropdownList.style.top = dropdownElement.offsetTop + dropdownElement.offsetHeight + 'px';
+        }
+    }   
 }
+
