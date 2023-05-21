@@ -1,0 +1,20 @@
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.b-bold {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.125rem;
+}
+
+.mini {
+    font-size: 0.9rem;
+}

@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+@import url(variables.css);
+@import url(typography.css);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--cream-BG);
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 100vh;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: var(--red);
+  border-radius: 20px;
+  color: var(--card-white);
+}
+header .l-side h2 {
+  margin-top: 0.5rem;
+}
+header .r-side {
+  width: 4.5rem;
+  height: 3rem;
+  background-image: url(images/logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  background-color: var(--card-white);
+}
+main .days {
+  margin-top: 4rem;
+}
+main hr {
+  margin-top: 2rem;
+  border: 1px solid var(--cream-BG);
+}
+main footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+main footer p {
+  color: var(--medium-brown);
+}
+main footer .r-side {
+  text-align: right;
+  padding-bottom: 0.5rem;
+}/*# sourceMappingURL=style.css.map */
