@@ -1,0 +1,105 @@
+@import url(typography.css);
+.wrap {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50vw;
+}
+.search-field {
+    display: flex;
+    align-items: center;
+    margin-top: 2.4rem;
+    padding: 0.6rem;
+    border-radius: 15px;
+    box-shadow: 0px 16px 30px -10px #4660bb33;
+    background-color: var(--white);
+
+    .search-label {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0.5rem 1.5rem;
+        background-image: url(../icon/icon-search.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    input {
+        flex-grow: 1;
+        outline: none;
+        border: none;
+
+        &::placeholder {
+            color: var(--coral-blue);
+        }
+    }
+
+    .search {
+        position: relative;
+
+        button {
+            padding: 0.8rem 1.5rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            background-color: var(--blue);
+            color: #FFFFFF;
+            transition: 0.2s;
+            cursor: pointer;
+    
+            &:hover {
+                background-color: var(--blue-hover);
+            }
+        }
+
+        span {
+            opacity: 0;
+            position: absolute;
+            top: calc(50% - 12.5px);
+            left: -6.5rem;
+            font-weight: 700;
+            color: var(--red);
+            transition: 0.5s;
+
+            &.no-results {
+                opacity: 1;
+            }
+        }
+    }  
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        color: #222731;
+    }
+
+    .theme-switch {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        transition: 0.2s;
+        cursor: pointer;
+
+        &.light {
+            filter: opacity(0.7);
+            &:hover {  
+                filter: opacity(1);
+            }
+        }
+
+        &.dark {
+            color: var(--white);
+            &:hover {
+                color: var(--gray-white);
+            }
+        }
+
+        span {
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+    }
+}

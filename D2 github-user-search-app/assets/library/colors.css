@@ -1,0 +1,15 @@
+:root {
+    /* LIGHT MODE */
+    --blue: #0079FF;
+    --blue-hover: #60ABFF;
+    --gray: #697C9A;
+    --gray-white: #90A4D4;
+    --coral-blue: #4B6A9B;
+    --smooth-black: #2B3442;
+    --gray-white: #F6F8FF;
+    --white: #FEFEFE;
+    --red: #F74646;
+    /* DARK MODE */
+    --black: #141D2F;
+    --dark-coral-blue: #1E2A47;
+}
