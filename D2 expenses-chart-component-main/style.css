@@ -51,7 +51,38 @@ main {
   background-color: var(--card-white);
 }
 main .days {
+  display: flex;
+  flex-direction: column;
   margin-top: 4rem;
+}
+main .days > div {
+  display: flex;
+  justify-content: space-around;
+}
+main .days > div > div {
+  width: 14.2857142857%;
+  text-align: center;
+}
+main .days .bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.5rem;
+  height: 100%;
+}
+main .days .bar > div {
+  width: 100%;
+  background-color: var(--red);
+  border-radius: 5px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+main .days .bar > div:hover {
+  background-color: #FF9B86;
+}
+main .days .day {
+  margin-top: 0.5rem;
+  color: var(--medium-brown);
 }
 main hr {
   margin-top: 2rem;
@@ -69,4 +100,12 @@ main footer p {
 main footer .r-side {
   text-align: right;
   padding-bottom: 0.5rem;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--dark-brown);
+  color: var(--card-white);
 }/*# sourceMappingURL=style.css.map */
