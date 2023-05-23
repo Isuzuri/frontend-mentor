@@ -12,7 +12,8 @@ searchBtn.addEventListener('click', async () => {
     const data = await response.json();
     main.innerHTML = getMainFormHTML(data);
     replaceEmptyFields();
-  });
+    main.classList.add('show');
+});
   
 
 function getMainFormHTML(response) {
@@ -76,9 +77,9 @@ function getDateRightFormat(date) {
 }
 
 function replaceEmptyFields() {
-    const fields = document.querySelectorAll('p')
+    const fields = Array.from(document.querySelectorAll('p, .github p, .info h1'))
     fields.forEach(element => {
-        if (element.innerHTML.includes('null') || element.innerHTML.includes('')) {
+        if (element.innerHTML.includes('null') || element.innerHTML === '<a href="" target="_blank"></a>') {
             element.innerHTML = 'Not available'
             element.classList.add('not-available')
         }

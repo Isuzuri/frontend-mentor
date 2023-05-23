@@ -48,7 +48,7 @@
   border-radius: 10px;
   background-color: var(--blue);
   color: #FFFFFF;
-  transition: 0.2s;
+  transition: background-color 0.2s;
   cursor: pointer;
 }
 .search-field .search button:hover {
@@ -61,7 +61,7 @@
   left: -6.5rem;
   font-weight: 700;
   color: var(--red);
-  transition: 0.5s;
+  transition: opacity 0.5s;
 }
 .search-field .search span.no-results {
   opacity: 1;
@@ -106,6 +106,10 @@ main {
   padding: 3rem;
   border-radius: 15px;
   background-color: var(--white);
+  opacity: 0;
+}
+main.show {
+  opacity: 1;
 }
 main .main-info {
   display: flex;
