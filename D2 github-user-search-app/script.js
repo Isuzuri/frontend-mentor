@@ -1,4 +1,14 @@
 const searchBtn = document.querySelector('.search button');
+const changeThemeBtn = document.querySelector('.theme-switch');
+
+window.addEventListener('load', () => {
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        document.querySelector('body').classList.add('dark')
+        changeThemeBtn.querySelector('span').innerHTML = 'LIGHT'
+        changeThemeBtn.querySelector('img').src = 'assets/icon/icon-sun.svg'
+    } else localStorage.setItem('theme', 'light');
+})
 
 searchBtn.addEventListener('click', async () => {
     const username = document.querySelector('.search-input').value;
@@ -15,6 +25,21 @@ searchBtn.addEventListener('click', async () => {
     main.classList.add('show');
 });
   
+changeThemeBtn.addEventListener('click', () => {
+    const body = document.querySelector('body');
+    const changeThemeBtnText = changeThemeBtn.querySelector('span')
+    if (body.classList.contains('dark')) {
+        body.classList.remove('dark');
+        changeThemeBtnText.innerHTML = 'DARK'
+        changeThemeBtn.querySelector('img').src = 'assets/icon/icon-moon.svg'
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.classList.add('dark');
+        changeThemeBtnText.innerHTML = 'LIGHT'
+        changeThemeBtn.querySelector('img').src = 'assets/icon/icon-sun.svg'
+        localStorage.setItem('theme', 'dark');
+    }
+})
 
 function getMainFormHTML(response) {
     return `

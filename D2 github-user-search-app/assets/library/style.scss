@@ -29,6 +29,8 @@
         flex-grow: 1;
         outline: none;
         border: none;
+        background-color: inherit;
+        color: inherit;
 
         &::placeholder {
             color: var(--coral-blue);
@@ -83,19 +85,10 @@ header {
         align-items: center;
         transition: 0.2s;
         cursor: pointer;
+        filter: opacity(0.7);
 
-        &.light {
-            filter: opacity(0.7);
-            &:hover {  
-                filter: opacity(1);
-            }
-        }
-
-        &.dark {
-            color: var(--white);
-            &:hover {
-                color: var(--gray-white);
-            }
+        &:hover {  
+            filter: opacity(1);
         }
 
         span {
@@ -203,4 +196,36 @@ a {
 
 .not-available {
     opacity: 0.7;
+}
+
+.dark {
+    background-color: var(--black);
+    color: var(--white);
+    transition: 0.3s;
+
+    header h1 {
+        color: inherit;
+    }
+
+    .wrap > div, main {
+        background-color: var(--dark-coral-blue);
+    }
+
+    .theme-switch {
+        color: var(--white);
+            &:hover {
+                color: var(--gray-white);
+            }
+    }
+
+    p {
+        color: var(--white);
+    }
+
+    .repo {
+        background-color: var(--black);
+        * {
+            color: var(--white);
+        }
+    }
 }

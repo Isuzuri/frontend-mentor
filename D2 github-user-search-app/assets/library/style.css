@@ -28,6 +28,8 @@
   flex-grow: 1;
   outline: none;
   border: none;
+  background-color: inherit;
+  color: inherit;
 }
 .search-field input::-moz-placeholder {
   color: var(--coral-blue);
@@ -80,18 +82,10 @@ header .theme-switch {
   align-items: center;
   transition: 0.2s;
   cursor: pointer;
-}
-header .theme-switch.light {
   filter: opacity(0.7);
 }
-header .theme-switch.light:hover {
+header .theme-switch:hover {
   filter: opacity(1);
-}
-header .theme-switch.dark {
-  color: var(--white);
-}
-header .theme-switch.dark:hover {
-  color: var(--gray-white);
 }
 header .theme-switch span {
   font-size: 0.8rem;
@@ -182,4 +176,31 @@ a:hover {
 
 .not-available {
   opacity: 0.7;
+}
+
+.dark {
+  background-color: var(--black);
+  color: var(--white);
+  transition: 0.3s;
+}
+.dark header h1 {
+  color: inherit;
+}
+.dark .wrap > div, .dark main {
+  background-color: var(--dark-coral-blue);
+}
+.dark .theme-switch {
+  color: var(--white);
+}
+.dark .theme-switch:hover {
+  color: var(--gray-white);
+}
+.dark p {
+  color: var(--white);
+}
+.dark .repo {
+  background-color: var(--black);
+}
+.dark .repo * {
+  color: var(--white);
 }/*# sourceMappingURL=style.css.map */
