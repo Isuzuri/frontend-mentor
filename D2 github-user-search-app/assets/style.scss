@@ -24,7 +24,7 @@ body {
         width: 1.5rem;
         height: 1.5rem;
         margin: 0.5rem 1.5rem;
-        background-image: url(../icon/icon-search.svg);
+        background-image: url(./icon/icon-search.svg);
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -237,15 +237,26 @@ a {
 @media (max-width: 1024px) {
     body {
         padding: 1rem;
-        font-size: 13px;
+        font-size: 11px;
     }
 
     .wrap {
         width: 100%;
     }
 
+    main .main-info .info h4 {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
     main .repo, main .link{
+        flex-wrap: nowrap;
         width: 100%;
         margin: 0;
+    }
+
+    main .link {
+        flex-direction: column;
     }
 }
