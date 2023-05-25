@@ -1,4 +1,8 @@
 @import url(typography.css);
+body {
+    transition: 0.5s;
+}
+
 .wrap {
     display: flex;
     flex-direction: column;
@@ -227,5 +231,21 @@ a {
         * {
             color: var(--white);
         }
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        padding: 1rem;
+        font-size: 13px;
+    }
+
+    .wrap {
+        width: 100%;
+    }
+
+    main .repo, main .link{
+        width: 100%;
+        margin: 0;
     }
 }
